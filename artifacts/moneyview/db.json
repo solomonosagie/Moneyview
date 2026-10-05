@@ -1,0 +1,87 @@
+{
+  "accounts": [
+    {
+      "id": "current",
+      "name": "Current",
+      "maskedNumber": "•••• 2048",
+      "balance": 1246800,
+      "currency": "NGN"
+    },
+    {
+      "id": "savings",
+      "name": "Savings",
+      "maskedNumber": "•••• 6817",
+      "balance": 3110000,
+      "currency": "NGN"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "maskedNumber": "•••• 1104",
+      "balance": 400000,
+      "currency": "NGN"
+    }
+  ],
+  "categories": [
+    "Groceries",
+    "Transport",
+    "Transfer",
+    "Income",
+    "Utilities",
+    "Dining",
+    "Housing",
+    "Health",
+    "Shopping",
+    "Subscriptions",
+    "Entertainment"
+  ],
+  "transactions": [
+    { "id": "aug-01", "accountId": "current", "date": "2026-08-02", "description": "Harborline Studio salary", "category": "Income", "amount": 820000, "type": "in" },
+    { "id": "aug-02", "accountId": "current", "date": "2026-08-04", "description": "Northstar Foods", "category": "Groceries", "amount": 31850, "type": "out" },
+    { "id": "aug-03", "accountId": "card", "date": "2026-08-06", "description": "CityHop", "category": "Transport", "amount": 9600, "type": "out" },
+    { "id": "aug-04", "accountId": "savings", "date": "2026-08-08", "description": "Monthly savings transfer", "category": "Transfer", "amount": 120000, "type": "out" },
+    { "id": "aug-05", "accountId": "current", "date": "2026-08-10", "description": "Lagos Water Works", "category": "Utilities", "amount": 14500, "type": "out" },
+    { "id": "aug-06", "accountId": "current", "date": "2026-08-12", "description": "Cedar Table Kitchen", "category": "Dining", "amount": 18750, "type": "out" },
+    { "id": "aug-07", "accountId": "current", "date": "2026-08-14", "description": "Neighbourhood pharmacy", "category": "Health", "amount": 8500, "type": "out" },
+    { "id": "aug-08", "accountId": "current", "date": "2026-08-16", "description": "Home rent contribution", "category": "Housing", "amount": 240000, "type": "out" },
+    { "id": "aug-09", "accountId": "card", "date": "2026-08-18", "description": "Olive Market", "category": "Groceries", "amount": 22600, "type": "out" },
+    { "id": "aug-10", "accountId": "current", "date": "2026-08-20", "description": "Transfer from Bisi", "category": "Transfer", "amount": 35000, "type": "in" },
+    { "id": "aug-11", "accountId": "card", "date": "2026-08-22", "description": "Lagos Book House", "category": "Shopping", "amount": 12700, "type": "out" },
+    { "id": "aug-12", "accountId": "current", "date": "2026-08-24", "description": "Mobile data plan", "category": "Utilities", "amount": 9000, "type": "out" },
+    { "id": "aug-13", "accountId": "current", "date": "2026-08-26", "description": "StreamBox monthly plan", "category": "Subscriptions", "amount": 4500, "type": "out" },
+    { "id": "aug-14", "accountId": "card", "date": "2026-08-28", "description": "Mainland Cinema", "category": "Entertainment", "amount": 11000, "type": "out" },
+    { "id": "aug-15", "accountId": "current", "date": "2026-08-30", "description": "CityHop", "category": "Transport", "amount": 7200, "type": "out" },
+
+    { "id": "sep-01", "accountId": "current", "date": "2026-09-01", "description": "Harborline Studio salary", "category": "Income", "amount": 820000, "type": "in" },
+    { "id": "sep-02", "accountId": "current", "date": "2026-09-03", "description": "Northstar Foods", "category": "Groceries", "amount": 27400, "type": "out" },
+    { "id": "sep-03", "accountId": "card", "date": "2026-09-05", "description": "CityHop", "category": "Transport", "amount": 11300, "type": "out" },
+    { "id": "sep-04", "accountId": "savings", "date": "2026-09-07", "description": "Monthly savings transfer", "category": "Transfer", "amount": 120000, "type": "out" },
+    { "id": "sep-05", "accountId": "current", "date": "2026-09-09", "description": "EkoPower", "category": "Utilities", "amount": 28800, "type": "out" },
+    { "id": "sep-06", "accountId": "current", "date": "2026-09-11", "description": "Cedar Table Kitchen", "category": "Dining", "amount": 22400, "type": "out" },
+    { "id": "sep-07", "accountId": "current", "date": "2026-09-13", "description": "Clinic visit", "category": "Health", "amount": 18000, "type": "out" },
+    { "id": "sep-08", "accountId": "current", "date": "2026-09-15", "description": "Home rent contribution", "category": "Housing", "amount": 240000, "type": "out" },
+    { "id": "sep-09", "accountId": "card", "date": "2026-09-17", "description": "Olive Market", "category": "Groceries", "amount": 19650, "type": "out" },
+    { "id": "sep-10", "accountId": "current", "date": "2026-09-19", "description": "Transfer from Bisi", "category": "Transfer", "amount": 42000, "type": "in" },
+    { "id": "sep-11", "accountId": "card", "date": "2026-09-21", "description": "Craft Market", "category": "Shopping", "amount": 24500, "type": "out" },
+    { "id": "sep-12", "accountId": "current", "date": "2026-09-23", "description": "Mobile data plan", "category": "Utilities", "amount": 9000, "type": "out" },
+    { "id": "sep-13", "accountId": "current", "date": "2026-09-25", "description": "StreamBox monthly plan", "category": "Subscriptions", "amount": 4500, "type": "out" },
+    { "id": "sep-14", "accountId": "card", "date": "2026-09-27", "description": "Mainland Cinema", "category": "Entertainment", "amount": 12500, "type": "out" },
+    { "id": "sep-15", "accountId": "current", "date": "2026-09-29", "description": "CityHop", "category": "Transport", "amount": 8200, "type": "out" },
+
+    { "id": "oct-01", "accountId": "current", "date": "2026-10-01", "description": "EkoPower", "category": "Utilities", "amount": 31000, "type": "out" },
+    { "id": "oct-02", "accountId": "current", "date": "2026-10-01", "description": "Transfer from Bisi", "category": "Transfer", "amount": 35000, "type": "in" },
+    { "id": "oct-03", "accountId": "card", "date": "2026-10-01", "description": "Lagos Book House", "category": "Shopping", "amount": 14200, "type": "out" },
+    { "id": "oct-04", "accountId": "current", "date": "2026-10-02", "description": "Cedar Table Kitchen", "category": "Dining", "amount": 19600, "type": "out" },
+    { "id": "oct-05", "accountId": "card", "date": "2026-10-02", "description": "CityHop", "category": "Transport", "amount": 10600, "type": "out" },
+    { "id": "oct-06", "accountId": "current", "date": "2026-10-02", "description": "Neighbourhood pharmacy", "category": "Health", "amount": 7200, "type": "out" },
+    { "id": "oct-07", "accountId": "current", "date": "2026-10-03", "description": "Market Square groceries", "category": "Groceries", "amount": 21300, "type": "out" },
+    { "id": "harborline-salary", "accountId": "current", "date": "2026-10-03", "description": "Salary — Harborline Studio", "category": "Income", "amount": 850000, "type": "in" },
+    { "id": "ekopower", "accountId": "current", "date": "2026-10-03", "description": "EkoPower", "category": "Utilities", "amount": 32000, "type": "out" },
+    { "id": "oct-10", "accountId": "savings", "date": "2026-10-04", "description": "Transfer to savings", "category": "Transfer", "amount": 90000, "type": "out" },
+    { "id": "transfer-bisi", "accountId": "current", "date": "2026-10-04", "description": "Transfer from Bisi", "category": "Transfer", "amount": 50000, "type": "in" },
+    { "id": "oct-12", "accountId": "card", "date": "2026-10-04", "description": "Palm Grove Grocers", "category": "Groceries", "amount": 17650, "type": "out" },
+    { "id": "northstar-foods", "accountId": "current", "date": "2026-10-05", "description": "Northstar Foods", "category": "Groceries", "amount": 28450, "type": "out" },
+    { "id": "cityhop", "accountId": "card", "date": "2026-10-05", "description": "CityHop", "category": "Transport", "amount": 12800, "type": "out" },
+    { "id": "oct-15", "accountId": "current", "date": "2026-10-05", "description": "Cedar Table Kitchen", "category": "Dining", "amount": 15600, "type": "out" }
+  ]
+}
