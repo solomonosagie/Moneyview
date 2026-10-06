@@ -34,7 +34,7 @@ export function useFetch(fetcher) {
             error:
               error instanceof Error
                 ? error.message
-                : 'The sample data could not be loaded.',
+                : 'The data could not be loaded.',
           }));
         }
       });

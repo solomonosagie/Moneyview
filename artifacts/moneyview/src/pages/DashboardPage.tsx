@@ -43,7 +43,7 @@ export default function DashboardPage() {
             Good morning, <span className="mv-accent-name">Ada</span>
           </>
         }
-        description="A clear view of your fictional accounts and recent sample activity."
+        description="A clear view of your accounts and recent activity."
         action={
           <Link className="button button-primary" to="/add">
             Add transaction
@@ -51,11 +51,11 @@ export default function DashboardPage() {
         }
       />
 
-      <section className="overview-grid" aria-label="Sample account overview">
+      <section className="overview-grid" aria-label="Account overview">
         <article className="balance-card" aria-labelledby="total-balance-heading">
           <div className="balance-card-top">
             <div>
-              <p className="card-kicker">TOTAL SAMPLE BALANCE</p>
+               <p className="card-kicker">TOTAL BALANCE</p>
               {accountsQuery.isLoading ? (
                 <LoadingState label="Loading account balances…" />
               ) : accountsQuery.error ? (
@@ -81,7 +81,7 @@ export default function DashboardPage() {
             <span>
               <span className="foot-marker" aria-hidden="true" />
               Across <span data-testid="balance-account-count">{accounts.length}</span>{' '}
-              sample accounts
+              accounts
             </span>
             <span className="balance-foot-note">As of {todayLabel}</span>
           </div>
@@ -91,13 +91,13 @@ export default function DashboardPage() {
         <article className="accounts-panel" aria-labelledby="accounts-heading">
           <div className="section-heading compact-heading">
             <div>
-              <p className="card-kicker">YOUR SETUP</p>
-              <h2 id="accounts-heading">Sample accounts</h2>
+                <p className="card-kicker">YOUR ACCOUNTS</p>
+                <h2 id="accounts-heading">Accounts</h2>
             </div>
             <span className="account-count">{accounts.length}</span>
           </div>
           {accountsQuery.isLoading ? (
-            <LoadingState label="Loading your sample accounts…" />
+            <LoadingState label="Loading your accounts…" />
           ) : accountsQuery.error ? (
             <ErrorState
               message="We could not load your accounts right now."
@@ -105,8 +105,8 @@ export default function DashboardPage() {
             />
           ) : accounts.length === 0 ? (
             <EmptyState
-              title="No sample accounts yet"
-              description="The local demo data does not include any accounts."
+              title="No accounts yet"
+              description="Your accounts will appear here."
             />
           ) : (
             <AccountList accounts={accounts} />
@@ -120,7 +120,7 @@ export default function DashboardPage() {
             <p className="card-kicker">THE LATEST</p>
             <h2 id="recent-heading">Recent transactions</h2>
             <p className="section-subtitle">
-              A little activity from Ada’s fictional account history.
+              Recent activity from Ada’s account.
             </p>
           </div>
           <Link className="text-link" to="/transactions">
@@ -137,7 +137,7 @@ export default function DashboardPage() {
         ) : transactions.length === 0 ? (
           <EmptyState
             title="No transactions yet"
-            description="Add a fictional transaction to see it appear here."
+            description="Add a transaction to see it appear here."
             action={
               <Link className="button button-secondary" to="/add">
                 Add the first transaction
@@ -154,18 +154,6 @@ export default function DashboardPage() {
         )}
       </section>
 
-      <aside className="disclaimer" aria-label="Important sample data notice">
-        <span className="disclaimer-mark" aria-hidden="true">
-          i
-        </span>
-        <div>
-          <strong>Just for learning, never for banking.</strong>
-          <p>
-            Everything here is fictional sample data. MoneyView is not connected
-            to a real account or bank.
-          </p>
-        </div>
-      </aside>
     </div>
   );
 }

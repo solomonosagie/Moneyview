@@ -29,7 +29,7 @@ function isCalendarDate(value: string) {
 }
 
 const transactionSchema = z.object({
-  accountId: z.string().min(1, 'Choose a sample account.'),
+  accountId: z.string().min(1, 'Choose an account.'),
   date: z
     .string()
     .min(1, 'Choose a date.')
@@ -111,13 +111,13 @@ export default function AddTransactionPage() {
   return (
     <div className="mv-content mv-form-content" data-testid="add-transaction-page">
       <PageHeading
-        eyebrow="SAMPLE ACTIVITY"
+        eyebrow="TRANSACTION ACTIVITY"
         title="Add a transaction"
-        description="Create a fictional entry. It will appear in your sample history."
+        description="Add a transaction to your history."
       />
 
       {loading ? (
-        <LoadingState label="Loading sample accounts and categories…" />
+        <LoadingState label="Loading accounts and categories…" />
       ) : categoriesQuery.error ? (
         <ErrorState
           message="We could not load transaction categories right now."
@@ -125,23 +125,22 @@ export default function AddTransactionPage() {
         />
       ) : accountsQuery.error ? (
         <ErrorState
-          message="We could not load your sample accounts right now."
+          message="We could not load your accounts right now."
           onRetry={accountsQuery.refetch}
         />
       ) : categories.length === 0 || accounts.length === 0 ? (
         <EmptyState
-          title="The sample form is not ready"
-          description="This demo needs at least one sample account and category before you can add a transaction."
+          title="The form is not ready"
+          description="Accounts and categories are not available right now."
           action={<Link className="button button-secondary" to="/">Return to overview</Link>}
         />
       ) : (
         <section className="mv-form-card" aria-labelledby="transaction-form-title">
           <div className="mv-form-card-header">
             <div>
-              <p className="card-kicker">NEW SAMPLE ENTRY</p>
+              <p className="card-kicker">NEW TRANSACTION</p>
               <h2 id="transaction-form-title">Transaction details</h2>
             </div>
-            <span className="mv-form-sample-label">Fictional data only</span>
           </div>
 
           {error ? (
@@ -164,7 +163,7 @@ export default function AddTransactionPage() {
           >
             <div className="mv-form-grid">
               <div className="mv-field">
-                <label htmlFor="transaction-account">Sample account</label>
+                <label htmlFor="transaction-account">Account</label>
                 <select
                   id="transaction-account"
                   aria-invalid={Boolean(form.formState.errors.accountId)}
@@ -295,14 +294,14 @@ export default function AddTransactionPage() {
                     <input type="radio" value="out" {...form.register('type')} />
                     <span>
                       <strong>Money out</strong>
-                      <small>Sample spending</small>
+                      <small>Spending</small>
                     </span>
                   </label>
                   <label className="mv-type-option">
                     <input type="radio" value="in" {...form.register('type')} />
                     <span>
                       <strong>Money in</strong>
-                      <small>Sample income</small>
+                      <small>Income</small>
                     </span>
                   </label>
                 </div>
@@ -311,8 +310,7 @@ export default function AddTransactionPage() {
 
             <div className="mv-form-footer">
               <p>
-                This entry stays in the local demo database. It does not move
-                real money.
+                Your transaction is saved in this app.
               </p>
               <button
                 className="button button-primary"

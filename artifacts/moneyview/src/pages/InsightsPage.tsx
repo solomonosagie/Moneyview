@@ -143,9 +143,9 @@ export default function InsightsPage() {
   return (
     <div className="mv-content" data-testid="insights-page">
       <PageHeading
-        eyebrow="PATTERNS IN YOUR SAMPLE DATA"
+        eyebrow="SPENDING PATTERNS"
         title="Insights"
-        description="See how fictional outgoing transactions group by category over time."
+        description="Review how your outgoing transactions group by category over time."
       />
 
       {transactionsQuery.isLoading ? (
@@ -157,8 +157,8 @@ export default function InsightsPage() {
         />
       ) : transactions.length === 0 ? (
         <EmptyState
-          title="No sample transactions yet"
-          description="Add a fictional transaction to start exploring monthly spending."
+          title="No transactions yet"
+          description="Add a transaction to start exploring monthly spending."
         />
       ) : (
         <>

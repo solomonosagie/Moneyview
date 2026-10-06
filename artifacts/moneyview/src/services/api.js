@@ -17,13 +17,13 @@ async function requestJSON(path, options = {}) {
       },
     });
   } catch {
-    throw new Error('The sample data service is unavailable. Try again shortly.');
+    throw new Error('The data service is unavailable. Try again shortly.');
   }
 
   if (!response.ok) {
     throw new Error(
       response.status >= 500
-        ? 'The sample data service is having trouble. Try again shortly.'
+        ? 'The data service is having trouble. Try again shortly.'
         : 'We could not complete that request. Check the details and try again.',
     );
   }
@@ -31,7 +31,7 @@ async function requestJSON(path, options = {}) {
   try {
     return await response.json();
   } catch {
-    throw new Error('The sample data service returned an unreadable response.');
+    throw new Error('The data service returned an unreadable response.');
   }
 }
 

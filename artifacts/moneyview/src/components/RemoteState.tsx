@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export function LoadingState({ label = 'Loading sample data…' }: { label?: string }) {
+export function LoadingState({ label = 'Loading data…' }: { label?: string }) {
   return (
     <div className="remote-state" role="status" aria-live="polite">
       <span className="loading-indicator" aria-hidden="true" />

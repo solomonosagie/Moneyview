@@ -43,8 +43,8 @@ function BrowserRouterWithRoutes() {
               <div className="mv-content">
                 <PageHeading
                   eyebrow="PAGE NOT FOUND"
-                  title="This page isn’t in the sample workspace"
-                  description="Use the navigation to return to your fictional account overview."
+                  title="This page isn’t available"
+                  description="Use the navigation to return to your account overview."
                   action={
                     <Link className="button button-primary" to="/">
                       Go to overview

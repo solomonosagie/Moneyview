@@ -36,7 +36,6 @@ export default function TransactionsPage() {
   const transactions = transactionsQuery.data ?? [];
   const categories = categoriesQuery.data ?? [];
 
-  // The displayed rows are always derived from the fetched source and live filters.
   const visibleTransactions = useMemo(
     () => filterTransactions(transactions, filters),
     [transactions, filters],
@@ -77,7 +76,7 @@ export default function TransactionsPage() {
       <PageHeading
         eyebrow="YOUR ACTIVITY"
         title="Transactions"
-        description="Search and review the complete fictional sample history."
+        description="Search and review your transaction history."
         action={
           <Link className="button button-primary" to="/add">
             Add transaction
@@ -186,7 +185,7 @@ export default function TransactionsPage() {
           <section className="transactions-panel mv-results-panel" aria-labelledby="transaction-results-heading">
             <div className="transactions-heading">
               <div>
-                <p className="card-kicker">SAMPLE HISTORY</p>
+                <p className="card-kicker">TRANSACTION HISTORY</p>
                 <h2 id="transaction-results-heading">All transactions</h2>
                 <p className="section-subtitle" aria-live="polite">
                   Showing {visibleTransactions.length} of {transactions.length}{' '}
@@ -199,7 +198,7 @@ export default function TransactionsPage() {
             {transactions.length === 0 ? (
               <EmptyState
                 title="No transactions yet"
-                description="Add a fictional transaction to begin building sample history."
+                description="Add a transaction to begin building your history."
                 action={
                   <Link className="button button-secondary" to="/add">
                     Add transaction

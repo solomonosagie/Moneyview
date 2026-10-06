@@ -63,7 +63,7 @@ export function TransactionTable({
     <div className="mv-table-scroll">
       <table className="transaction-table mv-data-table">
         <caption className="sr-only">
-          Sample transactions with category, date, and amount direction.
+          Transactions with category, date, and amount direction.
         </caption>
         <thead>
           <tr>

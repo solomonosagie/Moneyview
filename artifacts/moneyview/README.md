@@ -1,12 +1,12 @@
 # MoneyView
 
-MoneyView is a fictional Nigerian retail-banking learning app. It displays sample account balances and transactions in naira, and lets you explore transaction search, filters, sorting, adding sample entries, and spending insights.
+MoneyView is a Nigerian personal-finance dashboard for viewing account balances and transactions in naira, with search, filters, sorting, entry creation, and spending insights.
 
-It does not connect to a bank or handle real accounts, personal financial data, authentication, or payments.
+The app uses local records and does not connect to a bank or process payments.
 
-## Run in Replit
+## Development workflows
 
-Use the managed MoneyView workflows:
+Use the configured MoneyView workflows:
 
 - **web** serves the React app.
 - **Mock API** serves the development-only JSON Server at `/moneyview-api`.
@@ -28,13 +28,13 @@ The build command is:
 PORT=5173 BASE_PATH=/ pnpm --filter @workspace/moneyview run build
 ```
 
-Vite requires `PORT` and `BASE_PATH` to load its configuration; Replit's managed web workflow supplies them during development.
+Vite requires `PORT` and `BASE_PATH` to load its configuration; the development workflow supplies them.
 
 ## Pages
 
-- `/` — sample account overview and recent transactions
-- `/transactions` — searchable, filterable, sortable sample history
-- `/add` — validated form for creating a fictional transaction
+- `/` — account overview and recent transactions
+- `/transactions` — searchable, filterable, sortable transaction history
+- `/add` — validated form for creating a transaction
 - `/insights` — monthly outgoing spend by category
 
 The earlier static dashboard milestone is retained at `static-dashboard.html`; its original styling and JavaScript remain under `src/`.

@@ -1,7 +1,7 @@
 kind = "web"
 previewPath = "/"
 title = "MoneyView"
-description = "A fictional Nigerian retail banking dashboard for learners to explore sample balances and transactions in naira. This project uses fictional data only and will not connect to real banking or payment services."
+description = "A Nigerian retail-banking dashboard for account balances, transactions, and spending insights in naira."
 version = "1.0.0"
 id = "artifacts/moneyview"
 router = "path"

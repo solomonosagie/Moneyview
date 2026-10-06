@@ -130,15 +130,6 @@ export default function AppShell({ children, pageTitle }: AppShellProps) {
           ))}
         </nav>
 
-        <div className="mv-side-note" data-testid="text-sample-data-note">
-          <span className="mv-note-symbol" aria-hidden="true">
-            i
-          </span>
-          <p>
-            <strong>Sample space</strong>
-            <span>Explore fictional data. No bank account is connected.</span>
-          </p>
-        </div>
       </aside>
 
       <div className="mv-main-column">
@@ -147,16 +138,9 @@ export default function AppShell({ children, pageTitle }: AppShellProps) {
             <Brand testId="brand-moneyview-mobile" />
           </div>
           <div className="mv-page-context">
-            <span className="mv-context-caption" data-testid="text-page-context">
-              LEARNING WORKSPACE
-            </span>
             <span className="mv-context-title" data-testid="text-current-page">
               {currentTitle}
             </span>
-          </div>
-          <div className="mv-sample-status" data-testid="status-sample-mode">
-            <span className="mv-status-dot" aria-hidden="true" />
-            Sample mode
           </div>
         </header>
 
@@ -164,10 +148,6 @@ export default function AppShell({ children, pageTitle }: AppShellProps) {
           {children}
         </main>
 
-        <footer className="mv-footer" data-testid="footer-safety-note">
-          <span className="mv-footer-mark" aria-hidden="true">i</span>
-          <span>Fictional sample data only. MoneyView never connects to your bank.</span>
-        </footer>
       </div>
 
       <nav className="mv-mobile-nav" aria-label="Main navigation">
