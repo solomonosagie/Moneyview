@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MoneyView is a safe learning workspace for exploring fictional Nigerian retail banking data."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>MoneyView — Your learning dashboard</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="MoneyView workspace">
+        <div class="brand" aria-label="MoneyView">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">moneyview<span class="brand-period">.</span></span>
+        </div>
+
+        <div class="workspace-label">LEARNING WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <span class="nav-item nav-item-current" aria-current="page">
+            <span class="nav-icon nav-icon-grid" aria-hidden="true"></span>
+            Dashboard
+          </span>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="safe-note">
+            <span class="safe-icon" aria-hidden="true">i</span>
+            <p>Explore safely.<br />This is only a sample.</p>
+          </div>
+          <div class="profile-chip">
+            <span class="avatar" id="profile-initials" aria-hidden="true">AO</span>
+            <span><strong id="profile-full-name">Ada Okafor</strong><small>Sample profile</small></span>
+            <span class="profile-dot" aria-hidden="true"></span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong>Dashboard</strong></div>
+          <div class="topbar-meta"><span class="sample-pill"><span></span> Fictional sample</span><span class="date-label"><time id="dashboard-date" datetime="2026-10-05">Monday, 5 October 2026</time></span></div>
+        </header>
+
+        <div class="dashboard-content">
+          <section class="welcome-row" aria-labelledby="welcome-title">
+            <div>
+              <p class="eyebrow">YOUR MONEY, AT A GLANCE</p>
+              <h1 id="welcome-title">Good morning, <span id="greeting-name">Ada</span><span class="title-comma">.</span></h1>
+              <p class="welcome-subtitle">A clear view of your sample accounts and recent activity.</p>
+            </div>
+            <div class="welcome-ornament" aria-hidden="true">
+              <span class="sun-disc"></span><span class="sun-line sun-line-one"></span><span class="sun-line sun-line-two"></span>
+              <span class="ornament-caption"><span id="ornament-weekday">MONDAY</span><br />IN LAGOS</span>
+            </div>
+          </section>
+
+          <section class="overview-grid" aria-label="Account overview">
+            <article class="balance-card" aria-labelledby="total-balance-heading">
+              <div class="balance-card-top">
+                <div>
+                  <p class="card-kicker">TOTAL SAMPLE BALANCE</p>
+                  <h2 id="total-balance-heading" data-testid="value-overall-balance" aria-live="polite">₦—</h2>
+                </div>
+                <span class="balance-stamp" aria-hidden="true">₦</span>
+              </div>
+              <div class="balance-card-foot">
+                <span><span class="foot-marker" aria-hidden="true"></span> Across <span id="balance-account-count">3</span> sample accounts</span>
+                <span class="balance-foot-note">As of <time id="balance-as-of" datetime="2026-10-05">05 Oct 2026</time></span>
+              </div>
+              <div class="balance-decoration" aria-hidden="true"></div>
+            </article>
+
+            <article class="accounts-panel" aria-labelledby="accounts-heading">
+              <div class="section-heading compact-heading">
+                <div><p class="card-kicker">YOUR SETUP</p><h2 id="accounts-heading">Sample accounts</h2></div>
+                <span class="account-count" id="account-count">—</span>
+              </div>
+              <ul class="account-list" id="account-list" aria-label="Sample accounts"></ul>
+            </article>
+          </section>
+
+          <section class="transactions-panel" aria-labelledby="transactions-heading">
+            <div class="transactions-heading">
+              <div>
+                <p class="card-kicker">THE LATEST</p>
+                <h2 id="transactions-heading">Recent transactions</h2>
+                <p class="section-subtitle">A little activity from your fictional account history.</p>
+              </div>
+              <span class="transaction-period" id="transaction-period">03—05 OCT / 2026</span>
+            </div>
+
+            <div class="transaction-table-wrap">
+              <table class="transaction-table">
+                <caption class="visually-hidden">Five recent fictional transactions with amounts and money direction.</caption>
+                <thead>
+                  <tr><th scope="col">TRANSACTION</th><th scope="col">CATEGORY</th><th scope="col">DATE</th><th scope="col" class="amount-heading">AMOUNT</th></tr>
+                </thead>
+                <tbody id="transaction-list"></tbody>
+              </table>
+            </div>
+            <p class="transaction-footnote"><span aria-hidden="true">↳</span> Signs and labels show clearly whether money came in or went out.</p>
+          </section>
+
+          <aside class="disclaimer" aria-label="Important sample data notice" data-testid="notice-fictional-data">
+            <span class="disclaimer-mark" aria-hidden="true">i</span>
+            <div><strong>Just for learning, never for banking.</strong><p>Everything you see here is fictional sample data. MoneyView is not connected to a real account or bank.</p></div>
+            <span class="disclaimer-side-note">SAFE TO EXPLORE</span>
+          </aside>
+
+          <footer class="page-footer"><span>MoneyView <span class="footer-dot">•</span> Learning workspace</span><span>Fictional data <span class="footer-dot">•</span> Not a real account</span></footer>
+        </div>
+      </main>
+    </div>
+    <template id="account-row-template">
+      <li class="account-row">
+        <span class="account-symbol" aria-hidden="true"><span></span></span>
+        <span class="account-copy"><strong></strong><small></small></span>
+        <span class="account-balance"></span>
+      </li>
+    </template>
+    <template id="transaction-row-template">
+      <tr>
+        <td class="transaction-name-cell">
+          <span class="merchant-icon" aria-hidden="true"><span></span></span>
+          <span class="transaction-copy"><strong></strong><small></small></span>
+        </td>
+        <td><span class="category-label"></span></td>
+        <td class="transaction-date"></td>
+        <td class="transaction-amount"><span class="direction-tag"></span><strong></strong></td>
+      </tr>
+    </template>
+    <noscript>
+      <p class="no-script-message">Turn on JavaScript to view this fictional MoneyView dashboard.</p>
+    </noscript>
+    <script type="module" src="./src/dashboard.js"></script>
+  </body>
+</html>

@@ -1,45 +1,51 @@
-# [Project name]
+# MoneyView
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+MoneyView is a fictional Nigerian retail-banking learning app that uses sample data and displays amounts in naira.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Replit's managed `artifacts/moneyview: web` workflow runs the Vite app.
+- Replit's managed `artifacts/moneyview: Mock API` workflow runs the development-only JSON Server.
+- `pnpm --filter @workspace/moneyview run typecheck` — typecheck MoneyView.
+- `pnpm --filter @workspace/moneyview run test` — run MoneyView's unit tests.
+- `PORT=5173 BASE_PATH=/ pnpm --filter @workspace/moneyview run build` — build the static frontend.
+- The JSON Server reads and writes fictional seed data in `artifacts/moneyview/db.json`.
+- No secrets, database, bank connection, authentication, or payment service is needed.
 
 ## Stack
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- pnpm workspaces, React, TypeScript, and Vite
+- Development-only mock API: JSON Server
+- Form validation: Zod and React Hook Form
+- Charts: Recharts
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/moneyview/src/pages/` — dashboard, transactions, add-entry, and insights pages.
+- `artifacts/moneyview/src/services/api.js` — the single fetch boundary for the mock API.
+- `artifacts/moneyview/src/utils/` — formatting, filtering, and spending calculations.
+- `artifacts/moneyview/db.json` — fictional accounts, categories, and transactions.
+- `artifacts/moneyview/static-dashboard.html` — preserved static dashboard milestone.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Only the development workflow includes the mutable JSON Server; production serves static files.
+- Transaction results are derived from the original fetched array and current filters.
+- Keep all account and transaction data fictional and all money formatting in NGN.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+The app demonstrates sample balances, recent activity, transaction filtering and sorting, validated sample-entry creation, and month-by-month spending insights.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- This is a learning project; keep explanations and run instructions in plain English.
+- Preserve the earlier static milestone files when changing the app.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- API requests use the `/moneyview-api` service path in Replit; do not add a Vite proxy or make the mock API part of production.
 
 ## Pointers
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.

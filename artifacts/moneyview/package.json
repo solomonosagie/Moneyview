@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
     "build": "vite build --config vite.config.ts",
-    "mock-api": "json-server --watch db.json --routes routes.json --port 4000 --host 0.0.0.0 --delay 500",
+    "mock-api": "json-server --watch db.json --routes routes.json --port ${PORT:-4000} --host 0.0.0.0",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run --config vitest.config.ts",

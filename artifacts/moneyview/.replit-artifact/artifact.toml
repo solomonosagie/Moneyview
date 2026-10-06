@@ -26,3 +26,11 @@ to = "/index.html"
 [services.env]
 PORT = "23389"
 BASE_PATH = "/"
+
+[[services]]
+name = "Mock API"
+paths = ["/moneyview-api"]
+localPort = 4000
+
+[services.development]
+run = "pnpm --filter @workspace/moneyview run mock-api"

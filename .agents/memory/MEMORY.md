@@ -1,1 +1,2 @@
 - [MoneyView scope and mentoring](moneyview-scope.md) — Keep the app fictional and build it milestone by milestone, explaining each step and pausing at checkpoints.
+- [MoneyView mock API readiness](moneyview-mock-api.md) — Avoid long global response delays on the development JSON Server; they can make Replit readiness checks abort.

@@ -12,7 +12,6 @@ import {
   getCategories,
 } from '@/services/api.js';
 import type { Account, NewTransaction } from '@/types/moneyview';
-import { formatMoney } from '@/utils/format.js';
 
 function getLocalToday() {
   const now = new Date();
@@ -49,13 +48,11 @@ const transactionSchema = z.object({
     .refine(
       (value) => Number.isFinite(Number(value)) && Number(value) > 0,
       'Amount must be greater than zero.',
-    )
-    .transform(Number),
+    ),
   type: z.enum(['in', 'out']),
 });
 
-type FormInput = z.input<typeof transactionSchema>;
-type FormOutput = z.output<typeof transactionSchema>;
+type FormValues = z.infer<typeof transactionSchema>;
 
 export default function AddTransactionPage() {
   const categoriesQuery = useFetch<string[]>(getCategories);
@@ -64,7 +61,7 @@ export default function AddTransactionPage() {
   const navigate = useNavigate();
   const categories = categoriesQuery.data ?? [];
   const accounts = accountsQuery.data ?? [];
-  const form = useForm<FormInput, unknown, FormOutput>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(transactionSchema),
     defaultValues: {
       accountId: '',
@@ -82,12 +79,12 @@ export default function AddTransactionPage() {
     }
   }, [accounts, form]);
 
-  async function handleSave(values: FormOutput) {
+  async function handleSave(values: FormValues) {
     setSaveError(undefined);
     const data: NewTransaction = {
       ...values,
       description: values.description.trim(),
-      amount: values.amount,
+      amount: Number(values.amount),
     };
 
     try {

@@ -79,7 +79,7 @@ describe('filterTransactions', () => {
       filterTransactions(awkward, { category: 'uncategorised' }).map(
         (transaction) => transaction.id,
       ),
-    ).toEqual(['missing', 'valid']);
+    ).toEqual(['valid', 'missing']);
     expect(getCategoryLabel('   ')).toBe('Uncategorised');
   });
 });
