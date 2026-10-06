@@ -1,4 +1,0 @@
-{
-  "/moneyview-api": "/",
-  "/moneyview-api/*": "/$1"
-}

@@ -1,52 +1,16 @@
 # MoneyView
 
-MoneyView is a personal finance dashboard for Nigerian accounts. It displays balances and transactions in naira (₦) and includes monthly spending insights.
+MoneyView is a Nigerian personal-finance dashboard for viewing account balances and transactions in naira, with search, filters, sorting, entry creation, and spending insights.
 
-## Features
+The app uses the sample records shipped with the page. Added transactions stay in this browser. It does not connect to a bank or process payments.
 
-- See account balances and recent activity.
-- Search, filter, and sort transactions.
-- Add a transaction with a validated form.
-- Review monthly spending by category.
+## Open the app
 
-## Data
-
-The app uses local records in `artifacts/moneyview/db.json` and a JSON Server during development. It does not connect to banks, process payments, or use real customer data.
-
-## Run locally
-
-Install the workspace dependencies from the repository root:
-
-```sh
-pnpm install
-```
-
-Start the data service in one terminal:
-
-```sh
-pnpm --filter @workspace/moneyview run mock-api
-```
-
-Start the web app in a second terminal:
-
-```sh
-PORT=5173 BASE_PATH=/ VITE_API_BASE_URL=http://localhost:4000/moneyview-api \
-  pnpm --filter @workspace/moneyview run dev
-```
-
-Then open `http://localhost:5173`.
-
-## Checks
-
-```sh
-pnpm --filter @workspace/moneyview run typecheck
-pnpm --filter @workspace/moneyview run test
-PORT=5173 BASE_PATH=/ pnpm --filter @workspace/moneyview run build
-```
+Open `index.html` in a browser.
 
 ## Pages
 
-- `/` — account overview and recent transactions
-- `/transactions` — searchable and sortable transaction history
-- `/add` — add a transaction
-- `/insights` — monthly spending by category
+- Overview — account balances and recent transactions
+- Transactions — searchable, filterable, sortable transaction history
+- Add entry — validated form for creating a transaction
+- Insights — monthly outgoing spend by category
