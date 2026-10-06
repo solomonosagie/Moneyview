@@ -18,6 +18,7 @@ export default function DashboardPage() {
   const transactionsQuery = useFetch<Transaction[]>(getTransactions);
   const accounts = accountsQuery.data ?? [];
   const transactions = transactionsQuery.data ?? [];
+  // I add every account balance to get the total shown here.
   const totalBalance = accounts.reduce(
     (total, account) => total + account.balance,
     0,
